@@ -1,6 +1,6 @@
 {
-    "name": "corpora",
-    "short_name": "corpora",
+    "name": "cropora",
+    "short_name": "cropora",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
