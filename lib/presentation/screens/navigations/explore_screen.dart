@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/constant/app_colors.dart';
+import '../../../widgets/bottom_navigation.dart';
 
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({super.key});
@@ -118,41 +119,7 @@ class ExploreScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 1, // 'Explore' tab active
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: AppColors.primaryAppColor,
-        unselectedItemColor: Colors.grey,
-        showUnselectedLabels: true,
-        selectedLabelStyle: const TextStyle(
-          fontSize: 11,
-          fontWeight: FontWeight.w600,
-        ),
-        unselectedLabelStyle: const TextStyle(fontSize: 11),
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            activeIcon: Icon(Icons.search_sharp),
-            label: 'Explore',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_bag_outlined),
-            label: 'Market',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.people_outlined),
-            label: 'Community',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: 'Profile',
-          ),
-        ],
-      ),
+      bottomNavigationBar: const CustomBottomNavigationBar(currentIndex: 1),
     );
   }
 

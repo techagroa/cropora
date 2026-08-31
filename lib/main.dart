@@ -1,4 +1,5 @@
 import 'package:cropora/core/constant/app_colors.dart';
+import 'package:cropora/core/constant/app_constants.dart';
 import 'package:flutter/material.dart';
 
 import 'core/routes/app_routes.dart';
@@ -13,7 +14,7 @@ class CroporaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Cropora',
+      title: AppConstants.appName,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: AppColors.primaryAppColor,

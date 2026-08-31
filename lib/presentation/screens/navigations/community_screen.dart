@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/constant/app_colors.dart';
+import '../../../widgets/bottom_navigation.dart';
 
 class CommunityScreen extends StatefulWidget {
   const CommunityScreen({super.key});
@@ -226,34 +227,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 3, // 'Community' tab active
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: AppColors.primaryAppColor,
-        unselectedItemColor: Colors.grey,
-        showUnselectedLabels: true,
-        selectedLabelStyle: const TextStyle(
-          fontSize: 11,
-          fontWeight: FontWeight.w600,
-        ),
-        unselectedLabelStyle: const TextStyle(fontSize: 11),
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Explore'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_bag_outlined),
-            label: 'Market',
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.people), label: 'Community'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: 'Profile',
-          ),
-        ],
-      ),
+      bottomNavigationBar: const CustomBottomNavigationBar(currentIndex: 3),
     );
   }
 

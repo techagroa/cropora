@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/constant/app_colors.dart';
 import '../../../core/constant/app_images.dart';
+import '../../../widgets/bottom_navigation.dart';
 
 class MarketScreen extends StatefulWidget {
   const MarketScreen({super.key});
@@ -252,37 +253,7 @@ class _MarketScreenState extends State<MarketScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 2, // 'Market' tab active
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: AppColors.primaryAppColor,
-        unselectedItemColor: Colors.grey,
-        showUnselectedLabels: true,
-        selectedLabelStyle: const TextStyle(
-          fontSize: 11,
-          fontWeight: FontWeight.w600,
-        ),
-        unselectedLabelStyle: const TextStyle(fontSize: 11),
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Explore'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_bag),
-            label: 'Market',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.people_outlined),
-            label: 'Community',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: 'Profile',
-          ),
-        ],
-      ),
+      bottomNavigationBar: const CustomBottomNavigationBar(currentIndex: 2),
     );
   }
 
